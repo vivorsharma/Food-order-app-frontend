@@ -12,7 +12,7 @@ const { getAccessTokenSilently } = useAuth0();
   const accessToken = await getAccessTokenSilently()
 
   const response = await fetch(`${API_BASE_URL}/api/my/restaurant`, {
-    method: "POST",
+    method: "GET",
     headers: {
       Authorization: `Bearer ${accessToken}`
     },

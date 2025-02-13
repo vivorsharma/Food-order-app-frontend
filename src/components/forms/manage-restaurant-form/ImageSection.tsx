@@ -32,7 +32,7 @@ const ImageSection = () => {
               src={existingImageUrl}
               className="rounded-md object-cover h-full w-full"
             />
-        //   </AspectRatio>
+          </AspectRatio>
         )}
         <FormField
           control={control}

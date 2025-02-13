@@ -73,7 +73,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
 
         const menuItemsFormatted = restaurant.menuItems?.map((item) => ({
             ...item,
-            price: parseInt((item.price / 100).toFixed(2)),
+            price: parseInt(((item.price as any) / 100).toFixed(2)),
         }));
 
         const updatedRestaurant = {
@@ -81,7 +81,7 @@ const ManageRestaurantForm = ({ onSave, isLoading, restaurant }: Props) => {
             deliveryPrice: deliveryPriceFormatted,
             menuItems: menuItemsFormatted
         }
-
+        useForm
         form.reset(updatedRestaurant)
 
     }, [form, restaurant])
