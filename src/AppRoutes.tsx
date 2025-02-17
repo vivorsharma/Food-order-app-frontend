@@ -17,9 +17,17 @@ const AppRoutes = () => {
                 element={<AuthCallbackPage />} />
 
             <Route path="/search/:city"
-                element={<Layout
-                    showHero={false}> <SearchPage />
-                </Layout>}
+                element={
+                    <Layout
+                        showHero={false}> <SearchPage />
+                    </Layout>}
+            />
+
+            <Route path="/detail/:restaurantId"
+                element={
+                    <Layout
+                        showHero={false}> <SearchPage />
+                    </Layout>}
             />
 
             <Route element={<ProtectedRoute />}>
